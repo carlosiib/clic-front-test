@@ -8,7 +8,6 @@ import {
 import CustomersTable from "./components/CustomersTable";
 import UpdateCustomer from "./components/UpdateCustomer";
 import Spinner from "./components/Spinner";
-import Logo from "./assets/clic-logo.png"
 import './App.css';
 
 function App() {
