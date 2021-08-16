@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+.container {
+  border: 1px solid blue;
+  margin-top: 1.2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* NAVBAR */
+.logoImg {
+  width: 35%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbarLinksUL {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.navbarLinksLI {
+  font-weight: 700;
+  display: block;
+  color: black;
+  text-decoration: none;
+  margin-left: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listItems {
+  display: flex;
+}
+
+.storeName {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.cta_buttons_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-group {
+  width: 60%;
+}
+.customersLength {
+  font-weight: bold;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #e6e2e2;
+}
+
+/* UTILS */
+.spinnerContainer {
+  display: grid;
+  place-items: center;
+  margin: 3rem 0;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 50;
+  transition: opacity 0.15s linear;
+}
+.modalBackdrop h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 2rem;
+  background-color: #ffff;
+  border-color: black;
+  border-radius: 8px;
+  width: 40%;
+  z-index: 100;
+}
+
+.modalContent {
+}
+.modalClose {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.modalClose span {
+  font-size: 1.6rem;
+  color: dimgrey;
+  font-weight: bold;
+}
+
+.modalForm__input,
+.modalForm__btn {
+  display: block;
+  width: 100%;
+}
+
+.modalForm__input {
+  margin-top: 2rem;
 }
