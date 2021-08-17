@@ -118,3 +118,9 @@
 .modalForm__input {
   margin-top: 2rem;
 }
+
+.notFound_container {
+  display: grid;
+  place-items: center;
+  margin-top: 20%;
+}

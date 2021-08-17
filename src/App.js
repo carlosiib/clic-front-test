@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import CustomersTable from "./components/CustomersTable";
 import UpdateCustomer from "./components/UpdateCustomer";
+import NotFoundPage from "./components/NotFoundPage";
 import Spinner from "./components/Spinner";
 import './App.css';
 
@@ -61,6 +62,18 @@ function App() {
 
 
             <Switch>
+              <Route path="/" exact>
+                <div className="cta_buttons_container my-4">
+                  <div className="input-group">
+                    <input type="text" className="form-control" placeholder="Search by customer name, email or account status" aria-label="Search by customer name, email or account status" aria-describedby="basic-addon2" value={query} onChange={(e) => setQuery(e.target.value)} />
+                  </div>
+                  <span><span className="customersLength">{customers.length}</span> register customers</span>
+                </div>
+                <CustomersTable
+                  customers={search(customers)}
+                />
+              </Route>
+
               <Route path="/update">
                 <div className="cta_buttons_container my-4">
                   <div className="input-group">
@@ -72,17 +85,10 @@ function App() {
                   customers={search(customers)}
                   updatedData={updatedData} />
               </Route>
-              <Route path="/">
-                <div className="cta_buttons_container my-4">
-                  <div className="input-group">
-                    <input type="text" className="form-control" placeholder="Search by customer name, email or account status" aria-label="Search by customer name, email or account status" aria-describedby="basic-addon2" value={query} onChange={(e) => setQuery(e.target.value)} />
-                  </div>
-                  <span><span className="customersLength">{customers.length}</span> register customers</span>
-                </div>
-                <CustomersTable
-                  customers={search(customers)}
-                />
+              <Route>
+                <NotFoundPage />
               </Route>
+
             </Switch>
           </Router>
 
