@@ -1,4 +1,5 @@
 import { useState, useRef } from "react"
+import Snipper from "./Spinner"
 import ReactDom from "react-dom"
 
 export default function Modal({ content, isOpen, closeModal, updatedData }) {
