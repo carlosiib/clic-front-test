@@ -74,7 +74,7 @@ function App() {
                 />
               </Route>
 
-              <Route path="/update">
+              <Route path="/update" exact>
                 <div className="cta_buttons_container my-4">
                   <div className="input-group">
                     <input type="text" className="form-control" placeholder="Search by customer name, email or account status" aria-label="Search by customer name, email or account status" aria-describedby="basic-addon2" value={query} onChange={(e) => setQuery(e.target.value)} />
