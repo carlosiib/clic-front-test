@@ -1,5 +1,5 @@
 export default function Customers({ customers }) {
-  // comment
+
   return (
     <div>
       <table className="table table-bordered">
@@ -22,9 +22,9 @@ export default function Customers({ customers }) {
                 {user.email}
               </td>
               {user.state === "enabled" ?
-                <td style={{ "color": "green" }}>{user.state.charAt(0).toUpperCase() + user.state.slice(1)}</td>
+                <td className="text-success">{user.state.charAt(0).toUpperCase() + user.state.slice(1)}</td>
                 :
-                <td style={{ "color": "red" }}>{user.state.charAt(0).toUpperCase() + user.state.slice(1)}</td>
+                <td className="text-danger">{user.state.charAt(0).toUpperCase() + user.state.slice(1)}</td>
               }
             </tr>
           })}
