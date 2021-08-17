@@ -9,6 +9,7 @@ import CustomersTable from "./components/CustomersTable";
 import UpdateCustomer from "./components/UpdateCustomer";
 import NotFoundPage from "./components/NotFoundPage";
 import Spinner from "./components/Spinner";
+import Logo from "./assets/clic-logo.png"
 import './App.css';
 
 function App() {
@@ -43,7 +44,6 @@ function App() {
     const updatedData = customers.map(c => c.id !== data.id ? c : data);
     console.log(updatedData)
     setCustomers(updatedData)
-    // console.log("liftinf exitoso", customers)
   }
 
   return (
@@ -53,6 +53,9 @@ function App() {
           <Router>
             <nav >
               <ul className="navbarLinksUL">
+                <li ><Link to="/" >
+                  <img src={Logo} className="logoImg" alt="Clic Readers" />
+                </Link></li>
                 <div className="listItems">
                   <li ><Link to="/" className="navbarLinksLI">Home</Link></li>
                   <li ><Link to="/update" className="navbarLinksLI">Update</Link></li>
