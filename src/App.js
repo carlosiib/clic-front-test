@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     async function getData() {
       try {
-        const endpoint = await fetch("https://clic-deploy-test.herokuapp.com/")
+        const endpoint = await fetch("https://clic-pup.herokuapp.com/")
         const data = await endpoint.json()
         setLoading(true)
         setCustomers(data)

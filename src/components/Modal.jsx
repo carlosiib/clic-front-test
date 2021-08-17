@@ -13,7 +13,8 @@ export default function Modal({ content, isOpen, closeModal, updatedData }) {
   async function submitHandler(e) {
     e.preventDefault()
     try {
-      const put_request = await fetch("https://clic-deploy-test.herokuapp.com/update", {
+
+      const put_request = await fetch("https://clic-pup.herokuapp.com/update", {
         method: "PUT",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id: formRef.current.id.value, password, firstName, })
