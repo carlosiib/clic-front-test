@@ -46,12 +46,16 @@
 .input-group {
   width: 60%;
 }
+
 .customersLength {
   font-weight: bold;
 }
 
 .tableRow:nth-child(even) {
   background-color: #e6e2e2;
+}
+.enabledCustomer__status {
+  color: green;
 }
 
 /* UTILS */

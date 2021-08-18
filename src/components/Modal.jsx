@@ -4,7 +4,6 @@ import ReactDom from "react-dom"
 
 export default function Modal({ content, isOpen, closeModal, updatedData }) {
   const [password, setPassword] = useState("")
-  const [firstName, setFirstName] = useState("")
   const [sucessPost, setSucessPost] = useState(false)
   const [completedRequest, setCompletedRequest] = useState(false)
 
@@ -19,7 +18,7 @@ export default function Modal({ content, isOpen, closeModal, updatedData }) {
       const put_request = await fetch("https://clic-pup.herokuapp.com/update", {
         method: "PUT",
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: formRef.current.id.value, password, firstName, })
+        body: JSON.stringify({ id: formRef.current.id.value, password })
       })
       console.log("update", put_request)
       const put_data = await put_request.json()
@@ -66,7 +65,6 @@ export default function Modal({ content, isOpen, closeModal, updatedData }) {
                 </div>
                 <form onSubmit={submitHandler} ref={formRef}>
                   <input name="id" value={content[0].id} type="hidden" />
-                  <input type="text" placeholder="Name" className="modalForm__input form-control" name="name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                   <input type="text" placeholder="New password" className="modalForm__input form-control" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                   <button type="submit" className="modalForm__input btn btn-primary my-4" >Create password</button>
                 </form>
